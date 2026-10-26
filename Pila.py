@@ -3,7 +3,7 @@ pila = []
 
 while True:
     print("\n--- MENU DE PILAS ---")
-    print("1. Insertar pila")
+    print("1. Insertar en pila")
     print("2. Borrar en pila")
     print("3. Listar pila")
     print("4. Salir")
@@ -13,12 +13,11 @@ while True:
     if opcion == "1":
         numero = int(input("Ingresa un numero: "))
         pila.append(numero)
-        print("Numero agregado correctamente.")
+        print("Numero agregado.")
 
     elif opcion == "2":
         if len(pila) > 0:
-            eliminado = pila.pop()
-            print("Elemento eliminado:", eliminado)
+            print("Elemento eliminado:", pila.pop())
         else:
             print("La pila esta vacia.")
 
@@ -26,16 +25,13 @@ while True:
         print("Pila actual:", pila)
 
     elif opcion == "4":
-        print("Saliendo del programa.")
         break
 
     else:
         print("Opcion no valida.")
 
     nuevamente = input("Deseas ejecutar nuevamente? (s/n): ")
-
     if nuevamente.lower() != "s":
         break
 
 print("Programa terminado.")
-
